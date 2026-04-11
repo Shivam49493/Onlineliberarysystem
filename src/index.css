@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    @apply bg-ink-950 text-parchment-100;
+    margin: 0;
+    padding: 0;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-ink-900;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-ink-600 rounded-full;
+  }
+}
+
+@layer components {
+  .book-card {
+    @apply relative bg-ink-900 border border-ink-700 rounded-xl overflow-hidden cursor-pointer
+      transition-all duration-300 ease-out
+      hover:border-parchment-400 hover:-translate-y-1 hover:shadow-2xl;
+  }
+
+  .book-spine {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+  }
+
+  .genre-pill {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium font-mono
+      bg-ink-800 text-parchment-300 border border-ink-600;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-lg
+      bg-parchment-400 text-ink-950 font-medium font-body text-sm
+      transition-all duration-200
+      hover:bg-parchment-300 active:scale-95;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium
+      text-parchment-300 border border-ink-700
+      transition-all duration-200
+      hover:bg-ink-800 hover:border-ink-500 hover:text-parchment-100;
+  }
+
+  .input-dark {
+    @apply w-full bg-ink-900 border border-ink-700 text-parchment-100 placeholder-ink-500
+      rounded-lg px-4 py-2.5 text-sm font-body
+      focus:outline-none focus:border-parchment-400 focus:ring-1 focus:ring-parchment-400
+      transition-colors duration-200;
+  }
+
+  .section-heading {
+    @apply font-display text-2xl font-semibold text-parchment-100 tracking-tight;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium text-ink-300 transition-colors duration-200
+      hover:text-parchment-100;
+  }
+
+  .nav-link.active {
+    @apply text-parchment-100;
+  }
+}
+
+.star-filled { color: #e5bc6e; }
+.star-empty { color: #3d2e26; }
+
+.book-cover-placeholder {
+  background: linear-gradient(135deg, var(--cover-from), var(--cover-to));
+}
