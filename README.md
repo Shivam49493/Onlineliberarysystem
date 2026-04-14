@@ -127,6 +127,4 @@ For a meaningful commit history, commit in this order:
 
 ---
 
-## 📄 License
 
-MIT
