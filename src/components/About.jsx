@@ -73,12 +73,8 @@ export default function About() {
         </div>
       </div>
 
-      {/* Assignment note */}
-      <div className="mt-8 p-4 bg-parchment-500/10 border border-parchment-500/30 rounded-xl">
-        <p className="text-parchment-300 text-sm font-body leading-relaxed">
-          <span className="font-semibold font-display">Assignment Note:</span> This project fulfills the React Module 3 assignment requirements — functional components, state management with hooks, props, dynamic lists with <code className="font-mono text-xs bg-ink-800 px-1 py-0.5 rounded">.map()</code>, event handling, and styled with Tailwind CSS.
-        </p>
-      </div>
+      
+      
     </div>
   );
 }
